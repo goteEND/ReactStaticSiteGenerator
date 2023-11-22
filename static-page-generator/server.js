@@ -24,6 +24,11 @@ const templatize = (template, content) =>
   template.replace(/<!-- CONTENT -->/g, content);
 
 const saveFile = (filename, contents) => {
+  //check if dist exists
+  if (!fs.existsSync('./dist')) {
+    fs.mkdirSync('./dist');
+  }
+
   fs.writeFileSync(filename, contents);
 };
 
