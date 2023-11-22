@@ -1,16 +1,16 @@
-import { createContext, useContext } from 'react';
-import CommonStore from './commonStore';
+import { createContext, useContext } from 'react'
+import CommonStore from './commonStore'
 
 interface Store {
-  commonStore: CommonStore;
+  commonStore: CommonStore
 }
 
 export const store: Store = {
-  commonStore: new CommonStore(),
-};
+  commonStore: new CommonStore()
+}
 
-export const StoreContext = createContext(store);
+export const StoreContext = createContext(store)
 
 export function useStore() {
-  return useContext(StoreContext);
+  return useContext(StoreContext)
 }

@@ -1,5 +1,5 @@
-import './App.css';
-import { PageContent } from './app/PageContent';
+import './App.css'
+import { PageContent } from './app/PageContent'
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <h1>Static Site Generator</h1>
       <PageContent />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
