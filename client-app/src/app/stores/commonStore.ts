@@ -13,8 +13,15 @@ export default class CommonStore {
     makeAutoObservable(this)
   }
 
-  createPage = (pageName: string) => {
-    this.pages.push({ pageName, content: '' })
+  createPage = (pageName: string, content: string = '') => {
+    const pageIndex = this.pages.findIndex((page) => page.pageName === pageName)
+
+    if (pageIndex !== -1) {
+      console.log('Page with pageName already exists')
+    } else {
+      // Page with pageName doesn't exist, create a new page
+      this.pages.push({ pageName, content })
+    }
   }
 
   updatePageContent = (pageName: string, newContent: string) => {
